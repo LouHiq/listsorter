@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sorter app for HM</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div th:if="${!sortedlists.empty}">
+    	<p th:text="'Already sorted lists :'" />
+
+	    <tr th:each="sortedlist : ${sortedlists}">
+	    	<td><p th:text="'Id of sorted list : ' + ${sortedlist.id}"/></td>
+	    	<td th:text="'Number of swaps to sort the list : ' + ${sortedlist.nbOfSwaps}"></td>
+	      	<td th:text="'Time to sort in ms : ' + ${sortedlist.timeToSortInMillieSec}"></td>
+	    </tr>
+    </div>
+    <div th:if="${sortedlists.empty}">
+    	<p th:text="'No lists has been sorted yet!'" />
+    </div>
+    
+    <p>Do you want to sort a new list ? <a href="/sort">Klick here!</a></p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sorter app for HM</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p th:text="'Statistics from sorting a list :'" />
+    <p th:text="'Number of swaps to sort the list : ' + ${nbOfSwaps}" />
+    <p th:text="'Time to sort the list (millieseconds) : ' + ${timeOfSortingInMillieSec}" />
+    
+     <p>Do you want to sort a new list ? <a href="/sort">Klick here!</a></p>
+     <p>Show sorted lists <a href="/sortedlists">Klick here</a></p>
+</body>
+</html>
